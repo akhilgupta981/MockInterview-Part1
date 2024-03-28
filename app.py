@@ -25,7 +25,7 @@ def img2text(url):
 def generate_story(scenario):
     template ="""
     You are a storyteller.
-    You can generate a short story based on a simple narrative. The story should be no more than 20 words.
+    You can generate a short story based on a simple narrative. The story should be no more than 50 words.
 
     CONTEXT: {scenario}
     STORY:
