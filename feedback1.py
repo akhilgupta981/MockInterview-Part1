@@ -4,7 +4,6 @@ from langchain import chains
 from langchain_core import prompts
 from langchain_openai import ChatOpenAI
 from IPython.display import Audio
-from audiorecorder import audiorecorder
 from st_audiorec import st_audiorec
 import requests
 import streamlit as st
@@ -51,7 +50,7 @@ def text2speech(message):
 
     with open('audio.wav', 'wb') as file:
         file.write(response.content)
-    return
+    return 
 
 #Transcribe the recorded response to text
 
@@ -118,7 +117,7 @@ def main():
         with st.expander("Feedback in Text"): # Display the feedback to the response
             st.write(feedback)
         with st.expander("Feedback in Audio"): # Allow the user to play the feedback as audio
-            st.audio(verbalfeedback)    
+            st.audio('audio.wav')    
 
         
     else: 
